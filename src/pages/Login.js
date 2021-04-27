@@ -30,6 +30,10 @@ const Login = () => {
       >
         <Container maxWidth="sm">
           <Formik
+            initialValues={{
+              email: 'demo@devias.io',
+              password: 'Password123'
+            }}
             validationSchema={Yup.object().shape({
               email: Yup.string()
                 .email('Must be a valid email')
@@ -47,7 +51,8 @@ const Login = () => {
               handleChange,
               handleSubmit,
               isSubmitting,
-              touched
+              touched,
+              values
             }) => (
               <form onSubmit={handleSubmit}>
                 <Box sx={{ mb: 3 }}>
@@ -62,6 +67,45 @@ const Login = () => {
                     Sign in on the internal platform
                   </Typography>
                 </Box>
+                {/* <Grid container spacing={3}>
+                  <Grid item xs={12} md={6}>
+                    <Button
+                      color="primary"
+                      fullWidth
+                      startIcon={<FacebookIcon />}
+                      onClick={handleSubmit}
+                      size="large"
+                      variant="contained"
+                    >
+                      Login with Facebook
+                    </Button>
+                  </Grid>
+                  <Grid item xs={12} md={6}>
+                    <Button
+                      fullWidth
+                      startIcon={<GoogleIcon />}
+                      onClick={handleSubmit}
+                      size="large"
+                      variant="contained"
+                    >
+                      Login with Google
+                    </Button>
+                  </Grid>
+                </Grid>
+                <Box
+                  sx={{
+                    pb: 1,
+                    pt: 3
+                  }}
+                >
+                  <Typography
+                    align="center"
+                    color="textSecondary"
+                    variant="body1"
+                  >
+                    or login with email address
+                  </Typography>
+                </Box> */}
                 <TextField
                   error={Boolean(touched.email && errors.email)}
                   fullWidth
@@ -72,6 +116,7 @@ const Login = () => {
                   onBlur={handleBlur}
                   onChange={handleChange}
                   type="email"
+                  value={values.email}
                   variant="outlined"
                 />
                 <TextField
@@ -84,6 +129,7 @@ const Login = () => {
                   onBlur={handleBlur}
                   onChange={handleChange}
                   type="password"
+                  value={values.password}
                   variant="outlined"
                 />
                 <Box sx={{ py: 2 }}>
