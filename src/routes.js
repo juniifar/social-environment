@@ -9,6 +9,7 @@ import NotFound from 'src/pages/NotFound';
 import ProductList from 'src/pages/ProductList';
 import Register from 'src/pages/Register';
 import Settings from 'src/pages/Settings';
+import ProjectType from './pages/ProjectType';
 
 const routes = [
   {
@@ -27,6 +28,7 @@ const routes = [
     path: '/',
     element: <MainLayout />,
     children: [
+      { path: 'project_type_dashboard', element: <ProjectType /> },
       { path: 'login', element: <Login /> },
       { path: 'register', element: <Register /> },
       { path: '404', element: <NotFound /> },
