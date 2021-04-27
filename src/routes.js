@@ -9,6 +9,7 @@ import NotFound from 'src/pages/NotFound';
 import ProductList from 'src/pages/ProductList';
 import Register from 'src/pages/Register';
 import Settings from 'src/pages/Settings';
+import DashboardProject from './pages/DashboardProject';
 import ProjectType from './pages/ProjectType';
 
 const routes = [
@@ -16,6 +17,7 @@ const routes = [
     path: 'app',
     element: <DashboardLayout />,
     children: [
+      { path: 'dashboard_project', element: <DashboardProject /> },
       { path: 'account', element: <Account /> },
       { path: 'customers', element: <CustomerList /> },
       { path: 'dashboard', element: <Dashboard /> },
