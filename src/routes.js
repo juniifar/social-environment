@@ -10,6 +10,7 @@ import ProductList from 'src/pages/ProductList';
 import Register from 'src/pages/Register';
 import Settings from 'src/pages/Settings';
 import DashboardProject from './pages/DashboardProject';
+import MetaEditor from './pages/MetaEditor';
 import ProjectType from './pages/ProjectType';
 
 const routes = [
@@ -18,6 +19,7 @@ const routes = [
     element: <DashboardLayout />,
     children: [
       { path: 'dashboard_project', element: <DashboardProject /> },
+      { path: 'meta_editor', element: <MetaEditor /> },
       { path: 'account', element: <Account /> },
       { path: 'customers', element: <CustomerList /> },
       { path: 'dashboard', element: <Dashboard /> },

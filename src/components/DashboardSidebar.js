@@ -18,8 +18,9 @@ import {
   ShoppingBag as ShoppingBagIcon,
   User as UserIcon,
   UserPlus as UserPlusIcon,
-  Users as UsersIcon
+  Users as UsersIcon,
 } from 'react-feather';
+import TrackChangesIcon from '@material-ui/icons/TrackChanges';
 import NavItem from './NavItem';
 
 const user = {
@@ -33,6 +34,11 @@ const items = [
     href: '/app/dashboard_project',
     icon: BarChartIcon,
     title: 'Dashboard'
+  },
+  {
+    href: '/app/meta_editor',
+    icon: TrackChangesIcon,
+    title: 'Meta Editor'
   },
   {
     href: '/app/customers',
